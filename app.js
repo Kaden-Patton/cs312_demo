@@ -13,7 +13,9 @@ app.get("/api/add/", function(req, res) {
   let x = Number(req.query.x);
   let y = Number(req.query.y);
 
-  res.send(x + y);
+  res.send(JSON.stringify({
+    result: x+y,
+  }));
 });
 
 app.listen(port, () => {
